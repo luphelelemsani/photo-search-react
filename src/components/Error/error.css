@@ -1,0 +1,24 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.error-container img {
+  width: 550px;
+}
+
+.error-container h1 {
+  margin-top: 30px;
+  color: var(--orange);
+}
+@media screen and (max-width: 515px) {
+  .error-container img {
+    width: 350px;
+  }
+  .error-container h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
