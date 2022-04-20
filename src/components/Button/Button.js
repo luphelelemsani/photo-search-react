@@ -1,8 +1,6 @@
 import "./button.css";
 
 const Button = ({ filterItem, menuItems }) => {
-  // const [showSidebar, setShowSidebar] = React.useState(false);
-
   return (
     <>
       <div>

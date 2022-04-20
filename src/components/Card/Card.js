@@ -51,7 +51,7 @@ const Card = ({ item, data }) => {
         {scrollX !== 0 && (
           <button
             className="prev"
-            onClick={() => slide(-200)}
+            onClick={() => slide(-500)}
             onMouseEnter={(e) => anim(e)}
             onMouseLeave={(e) => anim2(e)}
           >
@@ -114,7 +114,7 @@ const Card = ({ item, data }) => {
         {!scrolEnd && (
           <button
             className="next"
-            onClick={() => slide(+200)}
+            onClick={() => slide(+500)}
             onMouseEnter={(e) => anim(e)}
             onMouseLeave={(e) => anim2(e)}
           >

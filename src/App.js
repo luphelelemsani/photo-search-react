@@ -10,7 +10,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
-  const clientId = "AuJVHwlctaFlVphaJhxZ9U3uf2DK9HhHbNul4VJ07wQ";
+  const clientId = process.env.REACT_APP_CLIENT_ID;
   const [item, setItem] = useState(data);
 
   const menuItems = [...new Set(data.map((Val) => Val.slug))];
@@ -43,7 +43,7 @@ const App = () => {
         });
     }
     fetchData();
-  }, [item]);
+  }, [item, clientId]);
 
   return (
     <>
@@ -52,20 +52,10 @@ const App = () => {
       ) : (
         <div>
           <div>
-            <Header
-              filterItem={filterItem}
-              setItem={setItem}
-              menuItems={menuItems}
-              data={data}
-            />
+            <Header filterItem={filterItem} />
             <div>
               <div>
-                <Buttons
-                  filterItem={filterItem}
-                  setItem={setItem}
-                  menuItems={menuItems}
-                  data={data}
-                />
+                <Buttons filterItem={filterItem} menuItems={menuItems} />
               </div>
               <div>
                 <Card item={item} data={data} />
